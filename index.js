@@ -16,9 +16,10 @@ const deleteKeys = async (pattern) => {
   }
 }
 
-app.get("/", async (req, res) => {
-  res.send("hi")
-});
+app.use('/blog/', require('./route/blog'));
+app.use('/', require('./route/user'));
+app.use('/auth/', require('./route/auth'));
+app.use('/admin/', require('./route/admin'));
 
 const PORT = process.env.PORT;
 
