@@ -1,20 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const moment = require('moment');
-var geoip = require('geoip-lite');
-
-// Utils
-const validator = require("../util/validate");
-const unique = require("../util/unique");
-const { sendMail } = require("../util/email");
-const date = require("../util/date");
-
-// Database Models Importing
-const Article = require("../model/article/model");
-const ArticleBin = require("../model/article/bin");
-const { default: mongoose } = require('mongoose');
 
 // Admin login page
 router.get("/login", (req, res, next) => {
