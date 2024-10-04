@@ -14,7 +14,7 @@ const compression = require("compression");
 const UAParser = require('ua-parser-js');
 const connectDB = require("./data/config");
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 const accessLogStream = fs.createWriteStream(
     path.join(__dirname, "access.log"),
