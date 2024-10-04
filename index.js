@@ -6,7 +6,6 @@ require("dotenv").config();
 
 app.use(express.json());
 
-const BookModel = require("./models/book.model");
 const redis = require('./redis')
 
 const deleteKeys = async (pattern) => {
