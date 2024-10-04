@@ -14,12 +14,12 @@ const deleteKeys = async (pattern) => {
   if (keys.length > 0) {
     redis.del(keys)
   }
-}
+} 
 
-app.use('/blog/', require('./route/blog'));
+// app.use('/blog/', require('./route/blog'));
 app.use('/', require('./route/user'));
-app.use('/auth/', require('./route/auth'));
-app.use('/admin/', require('./route/admin'));
+// app.use('/auth/', require('./route/auth'));
+// app.use('/admin/', require('./route/admin'));
 
 const PORT = process.env.PORT;
 
