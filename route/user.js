@@ -15,7 +15,7 @@ router.get("/", (req, res, next) => {
 });
 
 // Blog page route
-router.get("/blog", async (req, res, next) => {
+router.get("/blogs", async (req, res, next) => {
   try {
     let blogs = await Article.find().lean();
     res.render("pages/blog", { title: "Blog / Source Hub", description: "", blogs });
