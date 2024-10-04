@@ -1,11 +1,12 @@
 const express = require("express");
 let handlebars = require('express-handlebars');
 let cookieSession = require('cookie-session');
-
+const connectDB = require("./data/config");
 const app = express();
 
 require("dotenv").config();
 const redis = require('./redis')
+connectDB()
 
 const deleteKeys = async (pattern) => {
   const keys = await redis.keys(`${pattern}::*`)
